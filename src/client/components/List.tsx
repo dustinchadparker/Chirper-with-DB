@@ -21,7 +21,7 @@ class IList extends React.Component<IListProps, IListState> {
   async componentDidMount() {
     try {
       let r = await fetch("/api/chirps");
-      
+
       let data = await r.json();
       let chirps = Object.keys(data).map(key => {
         return {
