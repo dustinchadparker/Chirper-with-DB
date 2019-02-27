@@ -25,7 +25,7 @@ class IList extends React.Component<IListProps, IListState> {
       let data = await r.json();
       let chirps = Object.keys(data).map(key => {
         return {
-          id: key,
+          id: data[key].id,
           name: data[key].name,
           chirp: data[key].chirp
         };
